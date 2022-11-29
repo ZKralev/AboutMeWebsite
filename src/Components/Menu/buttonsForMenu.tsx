@@ -1,4 +1,4 @@
-import * as React from "react";
+import "./styles.css";
 
 type props = {
   label: string;
@@ -6,8 +6,8 @@ type props = {
 
 function MenuButton(props: props) {
   return (
-    <div className="button-box">
-      <div>{props.label}</div>
+    <div className="bn5">
+      <div className="bn5-text">{props.label}</div>
     </div>
   );
 }
