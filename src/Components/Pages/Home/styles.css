@@ -1,0 +1,14 @@
+.image {
+  width: 182px;
+  display: block;
+  margin-left: 0px;
+}
+
+.hp {
+  margin: auto;
+}
+
+.page-text {
+  size: 20px;
+  text-align: center;
+}
