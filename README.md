@@ -1,4 +1,4 @@
-#This is a basic website with some information about me. 
+# This is a basic website with some information about me. 
 
 Tostart the app you will need to clone it to your device and start it with: 
 
