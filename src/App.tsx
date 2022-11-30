@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react';
+import "./App.css";
+import MenuBox from "./Components/Menu/boxForMenu";
+import Page from "./Components/Pages/page";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+function App() {
+  return (
+    <div className="App">
+      <MenuBox />
+      <Page />
+    </div>
+  );
+}
 
-  useEffect(() => setTimeout(() => setCount(count + 1), 1000), [count]);
-
-  return <main className="count">{count}</main>;
-};
-
-const Application = () => <Counter />;
-
-export default Application;
+export default App;

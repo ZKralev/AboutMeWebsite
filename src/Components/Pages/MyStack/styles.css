@@ -1,0 +1,16 @@
+.image {
+  width: 182px;
+  display: block;
+  margin-left: 0px;
+}
+
+.msp {
+  margin: auto;
+  display: flex;
+}
+
+.page-text {
+  size: 30px;
+  margin: auto;
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+.page {
+  border: solid;
+  border-radius: 0.3em;
+  border-color: black;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+}

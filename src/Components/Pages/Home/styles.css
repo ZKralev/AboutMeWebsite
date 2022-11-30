@@ -1,0 +1,15 @@
+.image {
+  width: 182px;
+  display: block;
+  margin-left: 0px;
+}
+
+.hp {
+  margin: auto;
+  display: flex;
+}
+
+.page-text {
+  size: 30px;
+  text-align: center;
+}
