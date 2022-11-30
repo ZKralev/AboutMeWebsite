@@ -1,6 +1,6 @@
 # This is a basic website with some information about me. 
 
-Tostart the app you will need to clone it to your device and start it with: 
+To start the app you will need to clone it to your device and start it with: 
 
 ### `yarn start`
 
