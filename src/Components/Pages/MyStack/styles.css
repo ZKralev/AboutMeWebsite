@@ -4,12 +4,13 @@
   margin-left: 0px;
 }
 
-.hp {
+.msp {
   margin: auto;
   display: flex;
 }
 
 .page-text {
   size: 30px;
+  margin: auto;
   text-align: center;
 }
