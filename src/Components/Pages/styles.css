@@ -3,6 +3,12 @@
   border-radius: 0.3em;
   border-color: black;
   display: block;
-  margin: auto;
+  margin: 2%;
   margin-top: 1em;
+}
+
+.image {
+  width: 380px;
+  display: block;
+  margin-left: 0px;
 }

@@ -1,0 +1,49 @@
+.exp {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-text {
+  size: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: -webkit-center;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+
+.exp-img {
+  width: 600px;
+  display: block;
+  margin-left: 0px;
+}
+
+.job-separator {
+  border-bottom: 1px solid gray;
+  margin: 20px 0;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.page-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.comp-logo {
+  width: auto;
+  height: 50px;
+}

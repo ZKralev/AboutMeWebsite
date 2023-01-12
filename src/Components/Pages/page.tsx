@@ -1,6 +1,7 @@
 import AboutMe from "./AboutMe";
 import Home from "./Home";
 import MyStack from "./MyStack";
+import Experience from "./Experience";
 import "./styles.css";
 
 function Page() {
@@ -12,6 +13,8 @@ function Page() {
     currentPage = <Home />;
   } else if (url.includes("My%20Stack")) {
     currentPage = <MyStack />;
+  } else if (url.includes("Experience")) {
+    currentPage = <Experience />;
   } else {
     currentPage = <Home />;
   }

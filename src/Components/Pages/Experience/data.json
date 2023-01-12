@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Software Engineer I",
+        "company": "PROS",
+        "logo": "./logos/pros.jpg",
+        "dates": "09/2022 - present",
+        "description": "Working on a software product for internal usage. The product itself uses Golang as Backend, Postgres as database and frontend is Typescript with React. In this project I have onhand experience with Docker, Kubernetes and Helm Charts."
+    },
+    {
+        "title": "Intern Software Engineer",
+        "company": "PROS",
+        "logo": "./logos/pros.jpg",
+        "dates": "06/2022 - 09/2022",
+        "description": "Had to follow a pattern of leanings in order to complete the internship, starting from Agile Methodology to JavaScript, TypeScript, React, GoLang, Docker and Kubernetes . Had to work in a team of 5 people (all interns) in order to compleate our tasks. Was involved in a project that works with TypeScript and React for front-end and back-end running on Go."
+    },
+    {
+        "title": "Customer Experience Associate",
+        "company": "Crypto.com",
+        "logo": "./logos/crypto.png",
+        "dates": "04/2021 - 05/2021",
+        "description": "Had to communicate with end customers of the application, on different issues that they encounter. From technical to process issues and normal requests for updates on their accounts. Meeting high targets every month."
+    },
+    {
+        "title": "Fleet Manager",
+        "company": "Modis",
+        "logo": "./logos/modis.png",
+        "dates": "07/2020 - 03/2021",
+        "description": "Work planning, travel arranging, tasks distributing and revising for a team of 30+ people. Worked mainly with iOS applications like EyeDrive and FusionX. Travelled to Germany and managed my team personally. Reported to Regional Managers."
+    },
+    {
+        "title": "Global Incident Lifecycle Coordinator",
+        "company": "Modis",
+        "logo": "./logos/modis.png",
+        "dates": "01/2019 - 07/2020",
+        "description": "Operating an IMPACT Report, tool to find and chase any not updated tickets in the ITMS ticket system. Data Analysis. Creating Weekly based presentations for Clients and Support Teams."
+    },
+    {
+        "title": "Level 1 Agent",
+        "company": "Modis",
+        "logo": "./logos/modis.png",
+        "dates": "10/2017 - 01/2019",
+        "description": "Responsible for a big volume (around 25-40 a day) of calls and chats with corporate customers. Worked confluence to help out our clients. Troubleshooting PC’s software and hardware also assisting with the set-up of new Phones or Laptops."
+    }
+]
