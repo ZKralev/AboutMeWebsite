@@ -1,3 +1,20 @@
 {
-  "lables": ["Home", "My Stack", "About Me", "Experience"]
+  "lables": [
+  {
+    "title":"Home",
+    "link":""
+  },
+  {
+    "title":"My Stack",
+    "link":"stack"
+  },
+  {
+    "title":"About Me",
+    "link":"about"
+  },
+  {
+    "title":"Experience",
+    "link":"exp"
+  }
+]
 }
