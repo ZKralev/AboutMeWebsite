@@ -14,12 +14,12 @@ function Experience() {
       <div className="job-separator" />
         {jobs.map((job, index) => (
           <>
-            <h1>{job.title}</h1>
-            <h4>At</h4>
+            <h1 className="job-title">{job.title}</h1>
+            <h4 className="job-title">At</h4>
             {job.company === "PROS" && <img src={pros} className="comp-logo" alt="" />}
             {job.company === "Modis" && <img src={modis} className="comp-logo" alt="" />}
             {job.company === "Crypto.com" && <img src={crypto} className="comp-logo" alt="" />}
-            <h5>{job.dates}</h5>
+            <h5 className="job-title">{job.dates}</h5>
             <p>{job.description}</p>
             {index !== jobs.length - 1 && <div className="job-separator" />}
           </>

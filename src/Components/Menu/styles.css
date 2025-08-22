@@ -89,3 +89,37 @@
   top: 0;
   border-radius: 10px;
 }
+
+/* Responsive adjustments */
+@media (min-width: 600px) and (max-width: 992px) {
+  .menu-box {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .bn5 {
+    padding: 0.5em 1.1em;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-box {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+  }
+
+  .bn5 {
+    padding: 0.55em 1.25em;
+    width: 88%;
+    max-width: none;
+    margin-inline: auto;
+  }
+
+  .bn5-text {
+    display: inline;
+  }
+}

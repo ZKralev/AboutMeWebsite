@@ -5,6 +5,8 @@
   display: block;
   margin: 2%;
   margin-top: 1em;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .image {
@@ -20,4 +22,27 @@
   background-color: gray;
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .menu-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .page {
+    margin: 8px;
+    width: 100%;
+  }
+}
+
+/* Landscape phones / small tablets */
+@media (min-width: 600px) and (max-width: 992px) {
+  .page {
+    margin: 12px;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+  }
 }

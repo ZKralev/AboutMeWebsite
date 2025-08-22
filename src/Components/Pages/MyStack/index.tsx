@@ -42,7 +42,7 @@ const MyStack: React.FC = () => {
   const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm'];
   return (
     <div className="my-stack">
-      <img src={fullstk} className="image" alt="" />
+      <img src={fullstk} className="img-fullstk" alt="" />
       <div className="page-text">
         <h1> Tech Stack: </h1>
         <div className="icon-container">

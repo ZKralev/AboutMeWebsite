@@ -6,7 +6,7 @@
 }
 
 .page-text {
-  size: 30px;
+  font-size: 30px;
   max-width: 1000px;
   margin: 0 auto;
   text-align: -webkit-center;
@@ -46,4 +46,65 @@
 .comp-logo {
   width: auto;
   height: 50px;
+}
+
+@media (max-width: 768px) {
+  .icon-container {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .exp {
+    width: 100%;
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+  }
+
+  .page-text p {
+    font-size: 0.75rem;
+  }
+
+  .comp-logo {
+    width: auto;
+    height: 30px;
+  }
+
+  .exp-img {
+    width: 100%;
+    display: block;
+    margin-left: 0px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .exp {
+    width: 100%;
+  }
+
+  .icon-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .page-text p {
+    font-size: 0.8rem;
+  }
+
+  .comp-logo {
+    height: 24px;
+  }
+
+  .exp-img {
+    width: 100%;
+    display: block;
+    margin-left: 0px;
+  }
 }
