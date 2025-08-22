@@ -9,14 +9,7 @@ import Page from "./Components/Pages/page"
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-          {/* <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/stack" element={<MyStack/>} />
-            <Route path="/about" element={<AboutMe/>} />
-            <Route path="/exp" element={<Experience/>} />
-            <Route path="*" element={<Home />} />
-          </Routes> */}
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Page />}>
               <Route index element={<Home />} />
