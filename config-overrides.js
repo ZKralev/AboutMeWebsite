@@ -1,12 +1,5 @@
-const { override, addWebpackPlugin } = require('customize-cra');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { override } = require('customize-cra');
 
-module.exports = override(
-  addWebpackPlugin(
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: 'build', to: 'public' },
-      ],
-    }),
-  ),
-);
+// No custom webpack plugins are required. CRA already handles copying
+// assets from `public/` to `build/` during production builds.
+module.exports = override();

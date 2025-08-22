@@ -15,6 +15,14 @@
   {
     "title":"Experience",
     "link":"exp"
+  },
+  {
+    "title":"Contact Me",
+    "link":"https://www.linkedin.com/in/zdravko-kralev-99131614a/"
+  },
+  {
+    "title":"Source Code",
+    "link":"https://github.com/ZKralev/AboutMeWebsite"
   }
 ]
 }

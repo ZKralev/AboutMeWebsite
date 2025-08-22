@@ -1,4 +1,4 @@
-import fullstk from "../../../stack.jpg";
+import fullstk from "../../images/stack.jpg";
 import './styles.css';
 import React from 'react';
 import icon1 from './icons/browser.png'
@@ -11,6 +11,8 @@ import icon7 from './icons/spring_boot_icon.svg'
 import icon8 from './icons/typescript_icon.svg'
 import icon9 from './icons/ubuntu.png'
 import icon10 from './icons/windows_icon.svg'
+import icon11 from './icons/k8s.png'
+import icon12 from './icons/helm.png'
 
 const icons: { [key: string]: string } = {
   browser: icon1,
@@ -22,7 +24,9 @@ const icons: { [key: string]: string } = {
   spring: icon7,
   typescript: icon8,
   ubuntu: icon9,
-  windows: icon10
+  windows: icon10,
+  k8s: icon11,
+  helm: icon12
 }
 
 interface Props {
@@ -35,12 +39,12 @@ const Icon: React.FC<Props> = ({ iconName }) => {
 }
 
 const MyStack: React.FC = () => {
-  const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows'];
+  const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm'];
   return (
     <div className="my-stack">
       <img src={fullstk} className="image" alt="" />
       <div className="page-text">
-        <h1> So far my stack covers: </h1>
+        <h1> Tech Stack: </h1>
         <div className="icon-container">
           {iconNames.map(iconName => <Icon key={iconName} iconName={iconName} />)}
         </div>

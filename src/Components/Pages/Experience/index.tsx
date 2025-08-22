@@ -1,4 +1,4 @@
-import fullstk from "../../../work-experience.jpg";
+import fullstk from "../../images/work-experience.jpg";
 import './styles.css';
 import jobs from "./data.json";
 import pros from "./logos/pros.jpg"

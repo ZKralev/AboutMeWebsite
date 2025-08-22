@@ -1,9 +1,16 @@
 [
     {
+        "title": "Software Engineer II",
+        "company": "PROS",
+        "logo": "./logos/pros.jpg",
+        "dates": "09/2024 - present",
+        "description": "Working on the same software product adding more and more complex features to it. Access to Staging and Production was provided, using it daily to debug and fix issues with the help of kubernetes."
+    },
+    {
         "title": "Software Engineer I",
         "company": "PROS",
         "logo": "./logos/pros.jpg",
-        "dates": "09/2022 - present",
+        "dates": "09/2022 - 09/2024",
         "description": "Working on a software product for internal usage. The product itself uses Golang as Backend, Postgres as database and frontend is Typescript with React. In this project I have onhand experience with Docker, Kubernetes and Helm Charts."
     },
     {
