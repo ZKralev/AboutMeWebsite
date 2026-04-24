@@ -13,6 +13,7 @@ function AnimatedRoutes() {
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransitionStage] = useState("page-transition-enter page-transition-enter-active");
 
+  
   useEffect(() => {
     if (location.pathname !== displayLocation.pathname) {
       setTransitionStage("page-transition-exit page-transition-exit-active");
