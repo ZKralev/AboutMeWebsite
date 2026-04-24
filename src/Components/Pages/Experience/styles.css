@@ -3,108 +3,221 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
 }
 
-.page-text {
-  font-size: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: -webkit-center;
-}
-
-.icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 25%;
+.exp-heading {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
 }
 
 .exp-img {
-  width: 600px;
+  width: 520px;
   display: block;
-  margin-left: 0px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px var(--shadow);
+  margin-bottom: 2rem;
+  transition: transform 0.4s ease;
 }
 
-.job-separator {
-  border-bottom: 1px solid gray;
-  margin: 20px 0;
+.exp-img:hover {
+  transform: scale(1.02);
 }
 
-.h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+.timeline {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.page-text p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-left: 55px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 24px;
+  top: 0.4rem;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-secondary);
+  box-shadow: 0 0 0 3px var(--accent);
+}
+
+.timeline-content {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.job-dates {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.job-company-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.job-at {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.job-company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .comp-logo {
   width: auto;
-  height: 50px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.job-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .icon-container {
+  .exp-img {
     width: 100%;
-    justify-content: center;
-    gap: 12px;
+    max-width: 400px;
   }
 
-  .exp {
-    width: 100%;
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-item {
+    padding-left: 44px;
+  }
+
+  .timeline-marker {
+    left: 18px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .exp-heading {
+    font-size: 1.6rem;
   }
 
   .job-title {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
-  .page-text p {
-    font-size: 0.75rem;
+  .job-dates {
+    font-size: 0.8rem;
+  }
+
+  .job-company-name {
+    font-size: 1rem;
+  }
+
+  .job-description {
+    font-size: 0.9rem;
   }
 
   .comp-logo {
-    width: auto;
-    height: 30px;
-  }
-
-  .exp-img {
-    width: 100%;
-    display: block;
-    margin-left: 0px;
+    height: 28px;
   }
 }
 
-/* Small phones */
 @media (max-width: 375px) {
-  .exp {
+  .exp-img {
     width: 100%;
   }
 
-  .icon-container {
-    width: 100%;
-    justify-content: center;
+  .timeline::before {
+    left: 16px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-marker {
+    left: 16px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .exp-heading {
+    font-size: 1.4rem;
   }
 
   .job-title {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
   }
 
-  .page-text p {
-    font-size: 0.8rem;
+  .job-company-name {
+    font-size: 0.9rem;
+  }
+
+  .job-description {
+    font-size: 0.85rem;
   }
 
   .comp-logo {
     height: 24px;
-  }
-
-  .exp-img {
-    width: 100%;
-    display: block;
-    margin-left: 0px;
   }
 }

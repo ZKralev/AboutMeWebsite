@@ -29,22 +29,42 @@ const icons: { [key: string]: string } = {
   helm: icon12
 }
 
+const labels: { [key: string]: string } = {
+  browser: "Web Browsers",
+  docker: "Docker",
+  golang: "Go / Golang",
+  java: "Java",
+  linux: "Linux",
+  react: "React / React Native",
+  spring: "Spring Boot",
+  typescript: "TypeScript",
+  ubuntu: "Ubuntu",
+  windows: "Windows",
+  k8s: "Kubernetes",
+  helm: "Helm Charts"
+}
+
 interface Props {
   iconName: string;
 }
 
 const Icon: React.FC<Props> = ({ iconName }) => {
-  const Icon = icons[iconName];
-  return <img className="icon" src={Icon} width={50} height={50} alt={iconName} />
+  const src = icons[iconName];
+  return (
+    <div className="icon-wrapper">
+      <img className="icon" src={src} width={50} height={50} alt={iconName} />
+      <span className="icon-label">{labels[iconName]}</span>
+    </div>
+  )
 }
 
 const MyStack: React.FC = () => {
   const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm'];
   return (
-    <div className="my-stack">
-      <img src={fullstk} className="img-fullstk" alt="" />
+    <div className="my-stack animate-fade-in-up">
+      <img src={fullstk} className="img-fullstk" alt="Tech stack" />
       <div className="page-text">
-        <h1> Tech Stack: </h1>
+        <h1 className="stack-heading"> Tech Stack </h1>
         <div className="icon-container">
           {iconNames.map(iconName => <Icon key={iconName} iconName={iconName} />)}
         </div>

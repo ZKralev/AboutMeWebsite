@@ -12,13 +12,42 @@
 .icon-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 25%;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 90px;
+}
+
+.icon-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px var(--shadow);
 }
 
 .icon {
-  margin: 10px;
+  margin: 0;
+}
+
+.icon-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-weight: 500;
 }
 
 .my-stack{
@@ -28,39 +57,70 @@
 
 .img-fullstk {
   width: 480px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px var(--shadow);
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.img-fullstk:hover {
+  transform: scale(1.02);
+}
+
+.stack-heading {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
   .my-stack {
     flex-direction: column;
     align-items: center;
-    padding: 8px;
+    padding: 1rem;
   }
 
   .icon-container {
     width: 100%;
     justify-content: center;
-    gap: 12px;
+    gap: 1rem;
+  }
+
+  .icon-wrapper {
+    padding: 0.75rem;
+    min-width: 80px;
   }
 
   .img-fullstk {
     width: 100%;
+    max-width: 400px;
+  }
+
+  .stack-heading {
+    font-size: 1.6rem;
   }
 }
 
-/* Small phones */
 @media (max-width: 375px) {
   .my-stack {
     flex-direction: column;
     align-items: center;
-    padding: 8px;
-    gap: 6px;
+    padding: 0.5rem;
   }
 
   .icon-container {
     width: 100%;
     justify-content: center;
-    gap: 8px;
+    gap: 0.75rem;
+  }
+
+  .icon-wrapper {
+    padding: 0.6rem;
+    min-width: 70px;
+  }
+
+  .icon-label {
+    font-size: 0.65rem;
   }
 
   .img-fullstk {
@@ -69,5 +129,9 @@
 
   .page-text {
     font-size: 18px;
+  }
+
+  .stack-heading {
+    font-size: 1.4rem;
   }
 }

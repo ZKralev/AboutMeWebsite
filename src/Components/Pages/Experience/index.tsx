@@ -1,29 +1,41 @@
 import fullstk from "../../images/work-experience.jpg";
 import './styles.css';
 import jobs from "./data.json";
-import pros from "./logos/pros.jpg"
+import pros from "./logos/pros.png"
 import crypto from "./logos/crypto.png"
 import modis from "./logos/modis.png"
 
+const logoMap: Record<string, string> = {
+  "PROS": pros,
+  "Modis": modis,
+  "Crypto.com": crypto,
+};
 
 function Experience() {
   return (
-    <div className="exp">
-      <img src={fullstk} className="exp-img" alt="" />
+    <div className="exp animate-fade-in-up">
+      <img src={fullstk} className="exp-img" alt="Work experience" />
       <div className="page-text">
-      <div className="job-separator" />
-        {jobs.map((job, index) => (
-          <>
-            <h1 className="job-title">{job.title}</h1>
-            <h4 className="job-title">At</h4>
-            {job.company === "PROS" && <img src={pros} className="comp-logo" alt="" />}
-            {job.company === "Modis" && <img src={modis} className="comp-logo" alt="" />}
-            {job.company === "Crypto.com" && <img src={crypto} className="comp-logo" alt="" />}
-            <h5 className="job-title">{job.dates}</h5>
-            <p>{job.description}</p>
-            {index !== jobs.length - 1 && <div className="job-separator" />}
-          </>
-        ))}
+        <h1 className="exp-heading">Work Experience</h1>
+        <div className="timeline">
+          {jobs.map((job, index) => (
+            <div key={index} className="timeline-item">
+              <div className="timeline-marker" />
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h2 className="job-title">{job.title}</h2>
+                  <span className="job-dates">{job.dates}</span>
+                </div>
+                <div className="job-company-row">
+                  {logoMap[job.company] && (
+                    <img src={logoMap[job.company]} className="comp-logo" alt={job.company} />
+                  )}
+                </div>
+                <p className="job-description">{job.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

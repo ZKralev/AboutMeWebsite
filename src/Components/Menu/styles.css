@@ -1,11 +1,13 @@
 .menu-box {
-  padding: 20px;
+  padding: 16px 24px;
   display: flex;
   flex-direction: row;
-  background-color: gray;
+  background-color: #1a1a1a; /* Dark theme background */
   width: 100%;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: 2px solid #00d4ff; /* Accent border */
 }
 
 .bn5-text {
@@ -104,6 +106,28 @@
   }
 }
 
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   .menu-box {
     flex-wrap: wrap;
@@ -121,5 +145,10 @@
 
   .bn5-text {
     display: inline;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
