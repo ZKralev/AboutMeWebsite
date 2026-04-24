@@ -3,16 +3,20 @@ import './styles.css';
 import React from 'react';
 import icon1 from './icons/browser.png'
 import icon2 from './icons/docker.png'
-import icon3 from './icons/golang_icon.svg'
+import icon3 from './icons/golang.png'
 import icon4 from './icons/java_logo_logos_icon.svg'
 import icon5 from './icons/linux.png'
 import icon6 from './icons/react_react native_icon.svg'
-import icon7 from './icons/spring_boot_icon.svg'
-import icon8 from './icons/typescript_icon.svg'
+import icon7 from './icons/springboot.png'
+import icon8 from './icons/typescript_icon.png'
 import icon9 from './icons/ubuntu.png'
-import icon10 from './icons/windows_icon.svg'
+import icon10 from './icons/windows.png'
 import icon11 from './icons/k8s.png'
 import icon12 from './icons/helm.png'
+import icon13 from './icons/azure.png'
+import icon14 from './icons/ado.svg'
+import icon15 from './icons/json.svg'
+import icon16 from './icons/atlassian.svg'
 
 const icons: { [key: string]: string } = {
   browser: icon1,
@@ -26,7 +30,11 @@ const icons: { [key: string]: string } = {
   ubuntu: icon9,
   windows: icon10,
   k8s: icon11,
-  helm: icon12
+  helm: icon12,
+  azure: icon13,
+  ado: icon14,
+  json: icon15,
+  atlassian: icon16
 }
 
 const labels: { [key: string]: string } = {
@@ -35,13 +43,17 @@ const labels: { [key: string]: string } = {
   golang: "Go / Golang",
   java: "Java",
   linux: "Linux",
-  react: "React / React Native",
+  react: "React",
   spring: "Spring Boot",
   typescript: "TypeScript",
   ubuntu: "Ubuntu",
   windows: "Windows",
   k8s: "Kubernetes",
-  helm: "Helm Charts"
+  helm: "Helm Charts",
+  azure: "Azure",
+  ado: "ADO Pipelines",
+  json: "JSON",
+  atlassian: "Atlassian"
 }
 
 interface Props {
@@ -59,7 +71,7 @@ const Icon: React.FC<Props> = ({ iconName }) => {
 }
 
 const MyStack: React.FC = () => {
-  const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm'];
+  const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm', 'azure', 'ado', 'json', 'atlassian'];
   return (
     <div className="my-stack animate-fade-in-up">
       <img src={fullstk} className="img-fullstk" alt="Tech stack" />

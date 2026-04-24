@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import dev from "../../images/dev.jpg";
 import "./styles.css";
-import ts from '../MyStack/icons/typescript_icon.svg'
+import ts from '../MyStack/icons/typescript_icon.png'
 import rect from '../MyStack/icons/react_react native_icon.svg'
 import smile from '../../images/smile.png'
 
