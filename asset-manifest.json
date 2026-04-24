@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/AboutMeWebsite/static/css/main.836ddd63.css",
+    "main.js": "/AboutMeWebsite/static/js/main.34d064f8.js",
+    "static/js/27.07ddfad5.chunk.js": "/AboutMeWebsite/static/js/27.07ddfad5.chunk.js",
+    "static/media/me.jpg": "/AboutMeWebsite/static/media/me.d7fc6068c104c23203b7.jpg",
+    "static/media/springboot.png": "/AboutMeWebsite/static/media/springboot.1a753d3a09a8df3cec6c.png",
+    "static/media/work-experience.jpg": "/AboutMeWebsite/static/media/work-experience.0c4451f2c2cbcdacfba9.jpg",
+    "static/media/golang.png": "/AboutMeWebsite/static/media/golang.2afc04107459e4130a95.png",
+    "static/media/crypto.png": "/AboutMeWebsite/static/media/crypto.a0cf81eaee4b42699915.png",
+    "static/media/stack.jpg": "/AboutMeWebsite/static/media/stack.4b4481abaa31958da346.jpg",
+    "static/media/dev.jpg": "/AboutMeWebsite/static/media/dev.0a8d7cc77ebbf772e243.jpg",
+    "static/media/linux.png": "/AboutMeWebsite/static/media/linux.3db32b955e9b61f35998.png",
+    "static/media/pros.png": "/AboutMeWebsite/static/media/pros.19a93ff51b5ead21ef23.png",
+    "static/media/windows.png": "/AboutMeWebsite/static/media/windows.4bc81a9862a7f37a5396.png",
+    "static/media/ubuntu.png": "/AboutMeWebsite/static/media/ubuntu.850c5c19251a0a7e0eb6.png",
+    "static/media/browser.png": "/AboutMeWebsite/static/media/browser.968578572287965a93cc.png",
+    "static/media/k8s.png": "/AboutMeWebsite/static/media/k8s.5b3f060a4427c5513e2c.png",
+    "static/media/helm.png": "/AboutMeWebsite/static/media/helm.87b37d4fc5e0e87c5874.png",
+    "static/media/modis.png": "/AboutMeWebsite/static/media/modis.e424a2a837d155350103.png",
+    "static/media/azure.png": "/AboutMeWebsite/static/media/azure.3cf49db48e72089f1d01.png",
+    "static/media/docker.png": "/AboutMeWebsite/static/media/docker.e0ba9d2386737b9f87c6.png",
+    "static/media/smile.png": "/AboutMeWebsite/static/media/smile.3ff153f55d1be69164f9.png",
+    "static/media/ado.svg": "/AboutMeWebsite/static/media/ado.fdfd34e2634a2a925b14e615965b8259.svg",
+    "static/media/react_react native_icon.svg": "/AboutMeWebsite/static/media/react_react native_icon.21a0c19c223ef140c1a0a351bd45c89c.svg",
+    "static/media/java_logo_logos_icon.svg": "/AboutMeWebsite/static/media/java_logo_logos_icon.38de31869a5a34c44a779c241f671a9a.svg",
+    "index.html": "/AboutMeWebsite/index.html",
+    "static/media/atlassian.svg": "/AboutMeWebsite/static/media/atlassian.d43188e4f77ddc9fb464cf97c0f61e63.svg",
+    "static/media/json.svg": "/AboutMeWebsite/static/media/json.e8655c30e2f5d7bdcd2f29b08de42519.svg"
+  },
+  "entrypoints": [
+    "static/css/main.836ddd63.css",
+    "static/js/main.34d064f8.js"
+  ]
+}
