@@ -64,7 +64,7 @@ const Icon: React.FC<Props> = ({ iconName }) => {
   const src = icons[iconName];
   return (
     <div className="icon-wrapper">
-      <img className="icon" src={src} width={50} height={50} alt={iconName} />
+      <img className="icon" src={src} width={50} height={50} alt="" />
       <span className="icon-label">{labels[iconName]}</span>
     </div>
   )
@@ -74,7 +74,7 @@ const MyStack: React.FC = () => {
   const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm', 'azure', 'ado', 'json', 'atlassian'];
   return (
     <div className="my-stack animate-fade-in-up">
-      <img src={fullstk} className="img-fullstk" alt="Tech stack" />
+      <img src={fullstk} className="img-fullstk" alt="" />
       <div className="page-text">
         <h1 className="stack-heading"> Tech Stack </h1>
         <div className="icon-container">

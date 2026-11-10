@@ -29,7 +29,7 @@ function ThemeToggle() {
 }
 
 function MenuBox() {
-  const allButtons = menu.lables.map((e) => <MenuButton key={e.title} label={e.title} path={e.link} />);
+  const allButtons = menu.labels.map((e) => <MenuButton key={e.title} label={e.title} path={e.link} />);
   return (
     <div className="menu-box">
       {allButtons}

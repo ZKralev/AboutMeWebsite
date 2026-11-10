@@ -14,7 +14,7 @@ const logoMap: Record<string, string> = {
 function Experience() {
   return (
     <div className="exp animate-fade-in-up">
-      <img src={fullstk} className="exp-img" alt="Work experience" />
+      <img src={fullstk} className="exp-img" alt="" />
       <div className="page-text">
         <h1 className="exp-heading">Work Experience</h1>
         <div className="timeline">

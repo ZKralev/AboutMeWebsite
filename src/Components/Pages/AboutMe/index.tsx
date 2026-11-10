@@ -4,7 +4,7 @@ import "./styles.css";
 function AboutMe() {
   return (
     <div className="aup animate-fade-in-up">
-      <img src={me} className="img-me" alt="me" />
+      <img src={me} className="img-me" alt="Zdravko Kralev" />
       <div className="page-text">
         <h1 className="h1-text-about-me"> Zdravko Kralev </h1>
         <h3 className="h3-text"> Age: 31 </h3>
