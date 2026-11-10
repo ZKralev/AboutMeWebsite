@@ -22,9 +22,11 @@ Personal portfolio site for Zdravko Kralev (software engineer). Static single-pa
 
 ## Conventions
 - Build `base` is `/AboutMeWebsite/` (dev and tests run at `/`); the router basename comes from `import.meta.env.BASE_URL`. Import images from `src/` or use root-relative paths in `index.html` so the base is applied
-- New page = new folder + route in `App.tsx` + entry in `menu.json`
+- New page = new folder + route in `App.tsx` + entry in `menu.json` + title in `page.tsx` + file name in the `postbuild` list in `package.json`
+- Shared classes (`.page-text`, `.menu-box`) are defined once (`src/index.css`, `Menu/styles.css`); all CSS is bundled globally, so don't redefine them per page
+- My Stack: add a technology as one `[icon, label]` entry in `STACK` (`MyStack/index.tsx`)
 - Style new components with the existing CSS variables so both themes work
 
 ## Gotchas
 - Use npm, not yarn
-- `postbuild` copies `build/index.html` to `build/404.html`; that is what makes direct page links work on GitHub Pages. Don't remove it
+- `postbuild` copies `build/index.html` to `404.html` and to `stack.html`, `about.html`, `exp.html`, so direct page links load and answer HTTP 200 on GitHub Pages. Don't remove it

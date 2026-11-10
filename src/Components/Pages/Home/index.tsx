@@ -18,35 +18,36 @@ function TypingText({ lines, delay = 0 }: { lines: string[]; delay?: number }) {
   const [currentChar, setCurrentChar] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (currentLine < lines.length) {
-        if (currentChar < lines[currentLine].length) {
-          setCurrentChar((c: number) => c + 1);
-        } else {
-          const nextTimeout = setTimeout(() => {
-            setDisplayedLines((prev: string[]) => [...prev, lines[currentLine]]);
-            setCurrentLine((l: number) => l + 1);
-            setCurrentChar(0);
-          }, 600);
-          return () => clearTimeout(nextTimeout);
-        }
-      }
-    }, delay + 70);
-    return () => clearTimeout(timeout);
-  }, [currentLine, currentChar, lines, delay]);
+  const done = currentLine >= lines.length;
+  const lineTyped = !done && currentChar >= lines[currentLine].length;
 
   useEffect(() => {
+    if (done) return;
+    // pause 600ms at the end of a line before starting the next
+    const timeout = setTimeout(() => {
+      if (lineTyped) {
+        setDisplayedLines((prev: string[]) => [...prev, lines[currentLine]]);
+        setCurrentLine((l: number) => l + 1);
+        setCurrentChar(0);
+      } else {
+        setCurrentChar((c: number) => c + 1);
+      }
+    }, lineTyped ? 600 : delay + 70);
+    return () => clearTimeout(timeout);
+  }, [done, lineTyped, currentLine, currentChar, lines, delay]);
+
+  useEffect(() => {
+    if (done) return;
     const interval = setInterval(() => setShowCursor((s: boolean) => !s), 530);
     return () => clearInterval(interval);
-  }, []);
+  }, [done]);
 
   return (
     <div className="typing-container">
       {displayedLines.map((line: string, i: number) => (
         <h1 key={i} className="h1-text-home typed-line">{line}</h1>
       ))}
-      {currentLine < lines.length && (
+      {!done && (
         <h1 className="h1-text-home typing-line">
           {lines[currentLine].slice(0, currentChar)}
           <span className={`typing-cursor ${showCursor ? "visible" : ""}`}>|</span>

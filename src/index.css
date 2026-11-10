@@ -40,11 +40,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .page {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -52,8 +47,18 @@ code {
 }
 
 .page-text {
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+  text-align: -webkit-center; /* also centers block children in WebKit/Blink */
   color: var(--text-primary);
   transition: color 0.3s ease;
+}
+
+@media (max-width: 375px) {
+  .page-text {
+    font-size: 18px;
+  }
 }
 
 .page-text p,
@@ -79,16 +84,6 @@ code {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: var(--accent); }
 }
 
 @keyframes fadeInUp {

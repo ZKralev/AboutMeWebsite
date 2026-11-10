@@ -16,10 +16,8 @@ function AboutMe() {
       <div className="page-text">
         <h1 className="h1-text-about-me"> Zdravko Kralev </h1>
         <h2 className="h2-text-about-me">Golang Backend Developer &amp; DevOps Specialist</h2>
-        <h3 className="h3-text"> Age: 31 </h3>
         <h3 className="h3-text"> Country: Bulgaria </h3>
-        <h3 className="h3-text"> Mobile: +359 87 6844146 </h3>
-        <h3 className="h3-text"> Email: z.kralev@outlook.com </h3>
+        <h3 className="h3-text"> Email: <a className="about-link" href="mailto:z.kralev@outlook.com">z.kralev@outlook.com</a> </h3>
         <p className="p-text-about-me">
           Building things that work well and learning to make them better is what drives me. 
           Clean code, solid systems, and being a teammate people can count on matter a lot. 

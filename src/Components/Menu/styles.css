@@ -1,5 +1,5 @@
 .menu-box {
-  padding: 16px 24px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   background-color: var(--menu-bg);
@@ -131,10 +131,10 @@ a.active .bn5:before {
 
 @media (max-width: 768px) {
   .menu-box {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 8px;
-    padding: 8px;
-    align-items: center;
+    align-items: stretch;
   }
 
   .bn5 {

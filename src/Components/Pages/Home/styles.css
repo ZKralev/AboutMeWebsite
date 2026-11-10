@@ -14,11 +14,6 @@
   width: 100%;
 }
 
-.page-text {
-  font-size: 30px;
-  text-align: center;
-}
-
 .hicon {
   margin: 0px;
   vertical-align: middle;
@@ -173,11 +168,6 @@
   .home-hero {
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .page-text {
-    font-size: 20px;
-    text-align: center;
   }
 
   .img-dev {

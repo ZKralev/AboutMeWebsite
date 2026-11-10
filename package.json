@@ -13,7 +13,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc --noEmit && vite build",
-    "postbuild": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
+    "postbuild": "node -e \"for (const f of ['404','stack','about','exp']) require('fs').copyFileSync('build/index.html', 'build/' + f + '.html')\"",
     "test": "vitest run",
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0"

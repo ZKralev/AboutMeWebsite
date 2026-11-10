@@ -31,6 +31,7 @@ test('theme-color meta follows theme', () => {
   const meta = document.createElement('meta');
   meta.name = 'theme-color';
   document.head.appendChild(meta);
+  document.documentElement.style.setProperty('--page-bg', '#f5f5f7');
   localStorage.setItem('theme', 'light');
   render(<App />);
   expect(meta.content).toBe('#f5f5f7');
@@ -65,5 +66,21 @@ test('clicking a menu link shows that page after the fade', async () => {
   screen.getByText('My Stack').click();
   expect(await screen.findByText('Tech Stack')).toBeInTheDocument();
   expect(document.title).toBe('My Stack | Zdravko Kralev');
+  window.history.pushState({}, '', '/');
+});
+
+test('experience page lists jobs with logo or company name', () => {
+  window.history.pushState({}, '', '/exp');
+  render(<App />);
+  expect(screen.getAllByText('Software Engineer II')).toHaveLength(2);
+  expect(screen.getByAltText('Conga')).toBeInTheDocument();
+  window.history.pushState({}, '', '/');
+});
+
+test('stack page shows every technology once', () => {
+  window.history.pushState({}, '', '/stack');
+  render(<App />);
+  expect(document.querySelectorAll('.icon-wrapper')).toHaveLength(24);
+  expect(screen.getByText('PostgreSQL')).toBeInTheDocument();
   window.history.pushState({}, '', '/');
 });

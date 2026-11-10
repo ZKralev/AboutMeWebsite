@@ -22,7 +22,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0d0d0d' : '#f5f5f7');
+    const bg = getComputedStyle(document.documentElement).getPropertyValue('--page-bg').trim();
+    if (bg) document.querySelector('meta[name="theme-color"]')?.setAttribute('content', bg);
     try { localStorage.setItem('theme', theme); } catch { /* storage may be blocked */ }
   }, [theme]);
 
