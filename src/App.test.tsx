@@ -59,3 +59,11 @@ test('reduced motion shows welcome text at once', () => {
   expect(screen.getByText('Hello and welcome to my website')).toBeInTheDocument();
   window.matchMedia = orig;
 });
+
+test('clicking a menu link shows that page after the fade', async () => {
+  render(<App />);
+  screen.getByText('My Stack').click();
+  expect(await screen.findByText('Tech Stack')).toBeInTheDocument();
+  expect(document.title).toBe('My Stack | Zdravko Kralev');
+  window.history.pushState({}, '', '/');
+});

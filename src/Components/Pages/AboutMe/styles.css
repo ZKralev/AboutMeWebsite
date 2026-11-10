@@ -2,6 +2,7 @@
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   padding: 2rem;
   gap: 3rem;
   max-width: 1200px;

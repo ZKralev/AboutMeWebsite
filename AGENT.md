@@ -4,12 +4,12 @@ Personal portfolio site for Zdravko Kralev (software engineer). Static single-pa
 
 ## Stack
 - React 18 + TypeScript 5, Vite (`vite.config.ts`), tests on Vitest + Testing Library
-- `react-router-dom` v6, plain CSS (one `styles.css` per component), no UI library
+- `react-router-dom` v7, plain CSS (one `styles.css` per component), no UI library
 - Hosted on GitHub Pages at `https://zkralev.github.io/AboutMeWebsite/`
 
 ## Commands
-- `npm install`, `npm start` (dev server), `npm run build` (type check + build into `build/`), `npm test`, `npm run preview`
-- Deploy: `.github/workflows/deploy.yml` tests, builds and publishes to GitHub Pages on every push to `main`. There is no lint step
+- `npm install`, `npm start` (dev server), `npm run build` (type check + build into `build/`), `npm test`, `npm run lint`, `npm run preview`
+- Deploy: `.github/workflows/deploy.yml` tests, builds and publishes to GitHub Pages on every push to `main`; lint or test failures block the deploy
 - Changes are planned with OpenSpec (`openspec/`); archive each change once verified
 
 ## Layout
@@ -17,7 +17,7 @@ Personal portfolio site for Zdravko Kralev (software engineer). Static single-pa
 - `src/Components/Pages/page.tsx` - shared shell: menu + `<Outlet />`
 - `src/Components/Pages/{Home,AboutMe,MyStack,Experience}/` - one folder per page (`index.tsx` + `styles.css`)
 - `src/Components/Menu/menu.json` - menu entries (edit this to add or rename a nav link)
-- `src/Components/Pages/Experience/data.json` - job history; add entries here, not in JSX. Company logos are mapped by company name in `Experience/index.tsx` (`logoMap`), so a new company needs a logo import there too
+- `src/Components/Pages/Experience/data.json` - job history; add entries here, not in JSX. Company logos are mapped by company name in `Experience/index.tsx` (`logoMap`), so a new company needs a logo import there too (without one the company name shows as text)
 - `src/context/ThemeContext.tsx` - light/dark theme, stored in `localStorage`, applied as `data-theme` on `<html>`; CSS variables key off that attribute
 
 ## Conventions

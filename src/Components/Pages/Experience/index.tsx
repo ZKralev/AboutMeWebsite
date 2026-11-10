@@ -4,8 +4,10 @@ import jobs from "./data.json";
 import pros from "./logos/pros.png"
 import crypto from "./logos/crypto.png"
 import modis from "./logos/modis.png"
+import conga from "./logos/conga.svg"
 
 const logoMap: Record<string, string> = {
+  "Conga": conga,
   "PROS": pros,
   "Modis": modis,
   "Crypto.com": crypto,

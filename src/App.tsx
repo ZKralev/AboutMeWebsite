@@ -11,22 +11,18 @@ import { ThemeProvider } from "./context/ThemeContext";
 function AnimatedRoutes() {
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
-  const [transitionStage, setTransitionStage] = useState("page-transition-enter page-transition-enter-active");
+  // Exit stage is derived: the shown page lags the URL by one fade
+  const exiting = location.pathname !== displayLocation.pathname;
 
-  
   useEffect(() => {
-    if (location.pathname !== displayLocation.pathname) {
-      setTransitionStage("page-transition-exit page-transition-exit-active");
-      const timeout = setTimeout(() => {
-        setDisplayLocation(location);
-        setTransitionStage("page-transition-enter page-transition-enter-active");
-      }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 300);
-      return () => clearTimeout(timeout);
-    }
-  }, [location, displayLocation]);
+    if (!exiting) return;
+    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 300;
+    const timeout = setTimeout(() => setDisplayLocation(location), delay);
+    return () => clearTimeout(timeout);
+  }, [location, exiting]);
 
   return (
-    <div className={transitionStage}>
+    <div className={exiting ? "page-transition-exit page-transition-exit-active" : "page-transition-enter page-transition-enter-active"}>
       <Routes location={displayLocation}>
         <Route path="/" element={<Page />}>
           <Route index element={<Home />} />

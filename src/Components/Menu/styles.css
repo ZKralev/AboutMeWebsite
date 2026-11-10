@@ -2,12 +2,12 @@
   padding: 16px 24px;
   display: flex;
   flex-direction: row;
-  background-color: #1a1a1a; /* Dark theme background */
+  background-color: var(--menu-bg);
   width: 100%;
   text-align: center;
   justify-content: center;
   gap: 12px;
-  border-bottom: 2px solid #00d4ff; /* Accent border */
+  border-bottom: 2px solid var(--accent);
 }
 
 .bn5-text {
@@ -18,7 +18,7 @@
   padding: 0.6em 3.5em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
+  color: var(--menu-text);
   background: #111;
   cursor: pointer;
   position: relative;
