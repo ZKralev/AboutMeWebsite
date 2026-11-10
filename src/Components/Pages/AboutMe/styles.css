@@ -48,6 +48,17 @@
   max-width: 600px;
 }
 
+.cv-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6em 1.6em;
+  border-radius: 2rem;
+  border: 2px solid var(--accent);
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .about-card {
   display: flex;
   flex-direction: column;

@@ -40,6 +40,7 @@ test('about page image alt text', () => {
   window.history.pushState({}, '', '/about');
   render(<App />);
   expect(screen.getByAltText('Zdravko Kralev')).toBeInTheDocument();
+  expect(screen.getByText('Download CV')).toHaveAttribute('href', '/Zdravko-CV.pdf');
   window.history.pushState({}, '', '/');
 });
 

@@ -16,6 +16,9 @@ function AboutMe() {
           Clean code, solid systems, and being a teammate people can count on matter a lot. 
           With 5+ years in IT outsourcing and 4+ years in software development, the focus has been on backend services, cloud infrastructure, and modern web stacks.
         </p>
+        <a className="cv-link" href={`${import.meta.env.BASE_URL}Zdravko-CV.pdf`} download>
+          Download CV
+        </a>
       </div>
     </div>
   );
