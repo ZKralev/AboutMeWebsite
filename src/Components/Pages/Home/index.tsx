@@ -5,14 +5,16 @@ import ts from '../MyStack/icons/typescript_icon.png'
 import rect from '../MyStack/icons/react_react native_icon.svg'
 import smile from '../../images/smile.png'
 
+const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const TYPING_LINES = [
   "Hello and welcome to my website",
   "it will tell you a little bit about me"
 ];
 
 function TypingText({ lines, delay = 0 }: { lines: string[]; delay?: number }) {
-  const [displayedLines, setDisplayedLines] = useState<string[]>([]);
-  const [currentLine, setCurrentLine] = useState(0);
+  const [displayedLines, setDisplayedLines] = useState<string[]>(() => (reducedMotion() ? lines : []));
+  const [currentLine, setCurrentLine] = useState(() => (reducedMotion() ? lines.length : 0));
   const [currentChar, setCurrentChar] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
 

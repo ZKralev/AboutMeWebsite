@@ -76,7 +76,8 @@
   background: transparent;
 }
 
-.bn5:hover:before {
+.bn5:hover:before,
+a.active .bn5:before {
   opacity: 1;
 }
 

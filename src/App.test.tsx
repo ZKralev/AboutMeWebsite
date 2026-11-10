@@ -12,8 +12,8 @@ test('renders the menu', () => {
 });
 
 test('renders when localStorage throws', () => {
-  const spy = jest.spyOn(Storage.prototype, 'getItem').mockImplementation(() => { throw new Error('blocked'); });
-  const set = jest.spyOn(Storage.prototype, 'setItem').mockImplementation(() => { throw new Error('blocked'); });
+  const spy = vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => { throw new Error('blocked'); });
+  const set = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => { throw new Error('blocked'); });
   render(<App />);
   expect(screen.getByText('My Stack')).toBeInTheDocument();
   spy.mockRestore();
@@ -41,4 +41,20 @@ test('about page image alt text', () => {
   render(<App />);
   expect(screen.getByAltText('Zdravko Kralev')).toBeInTheDocument();
   window.history.pushState({}, '', '/');
+});
+
+test('stack menu link is marked current', () => {
+  window.history.pushState({}, '', '/stack');
+  render(<App />);
+  expect(screen.getByText('My Stack').closest('a')).toHaveAttribute('aria-current', 'page');
+  expect(screen.getByText('Home').closest('a')).not.toHaveAttribute('aria-current');
+  window.history.pushState({}, '', '/');
+});
+
+test('reduced motion shows welcome text at once', () => {
+  const orig = window.matchMedia;
+  window.matchMedia = ((q: string) => ({ ...orig(q), matches: q.includes('reduce') })) as typeof window.matchMedia;
+  render(<App />);
+  expect(screen.getByText('Hello and welcome to my website')).toBeInTheDocument();
+  window.matchMedia = orig;
 });

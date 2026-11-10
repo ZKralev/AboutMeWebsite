@@ -3,13 +3,13 @@
 Personal portfolio site for Zdravko Kralev (software engineer). Static single-page app, no backend.
 
 ## Stack
-- React 18 + TypeScript 4, Create React App 5 via `react-app-rewired` (`config-overrides.js` is a no-op)
+- React 18 + TypeScript 5, Vite (`vite.config.ts`), tests on Vitest + Testing Library
 - `react-router-dom` v6, plain CSS (one `styles.css` per component), no UI library
-- Hosted on GitHub Pages: `homepage` in `package.json` is `https://zkralev.github.io/AboutMeWebsite/`
+- Hosted on GitHub Pages at `https://zkralev.github.io/AboutMeWebsite/`
 
 ## Commands
-- `npm install`, `npm start` (dev, port 3000), `npm run build`, `npm test`
-- Deploy: `.github/workflows/deploy.yml` tests, builds and publishes to GitHub Pages on every push to `main`. CI treats lint warnings as errors, so check with `CI=true npm run build`
+- `npm install`, `npm start` (dev server), `npm run build` (type check + build into `build/`), `npm test`, `npm run preview`
+- Deploy: `.github/workflows/deploy.yml` tests, builds and publishes to GitHub Pages on every push to `main`. There is no lint step
 - Changes are planned with OpenSpec (`openspec/`); archive each change once verified
 
 ## Layout
@@ -21,10 +21,10 @@ Personal portfolio site for Zdravko Kralev (software engineer). Static single-pa
 - `src/context/ThemeContext.tsx` - light/dark theme, stored in `localStorage`, applied as `data-theme` on `<html>`; CSS variables key off that attribute
 
 ## Conventions
-- Router uses `basename={process.env.PUBLIC_URL}`; keep asset paths relative to `PUBLIC_URL` so they work on the Pages subpath
+- Build `base` is `/AboutMeWebsite/` (dev and tests run at `/`); the router basename comes from `import.meta.env.BASE_URL`. Import images from `src/` or use root-relative paths in `index.html` so the base is applied
 - New page = new folder + route in `App.tsx` + entry in `menu.json`
 - Style new components with the existing CSS variables so both themes work
 
 ## Gotchas
 - Use npm, not yarn
-- `public/404.html` exists for GitHub Pages SPA deep links; don't delete it
+- `postbuild` copies `build/index.html` to `build/404.html`; that is what makes direct page links work on GitHub Pages. Don't remove it

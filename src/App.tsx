@@ -20,7 +20,7 @@ function AnimatedRoutes() {
       const timeout = setTimeout(() => {
         setDisplayLocation(location);
         setTransitionStage("page-transition-enter page-transition-enter-active");
-      }, 300);
+      }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 300);
       return () => clearTimeout(timeout);
     }
   }, [location, displayLocation]);
@@ -44,7 +44,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <AnimatedRoutes />
         </BrowserRouter>
       </div>

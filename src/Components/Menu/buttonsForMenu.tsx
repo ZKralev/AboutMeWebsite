@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 type props = {
@@ -21,11 +21,11 @@ function MenuButton(props: props) {
   }
 
   return (
-    <Link to={props.path}>
+    <NavLink to={props.path} end>
       <div className="bn5">
         <div className="bn5-text">{props.label}</div>
       </div>
-    </Link>
+    </NavLink>
   );
 }
 
