@@ -17,6 +17,14 @@ import icon13 from './icons/azure.png'
 import icon14 from './icons/ado.svg'
 import icon15 from './icons/json.svg'
 import icon16 from './icons/atlassian.svg'
+import icon17 from './icons/postgresql.svg'
+import icon18 from './icons/rabbitmq.svg'
+import icon19 from './icons/amazonwebservices.svg'
+import icon20 from './icons/githubactions.svg'
+import icon21 from './icons/php.svg'
+import icon22 from './icons/laravel.svg'
+import icon23 from './icons/tailwindcss.svg'
+import icon24 from './icons/bash.svg'
 
 const icons: { [key: string]: string } = {
   browser: icon1,
@@ -34,7 +42,15 @@ const icons: { [key: string]: string } = {
   azure: icon13,
   ado: icon14,
   json: icon15,
-  atlassian: icon16
+  atlassian: icon16,
+  postgresql: icon17,
+  rabbitmq: icon18,
+  amazonwebservices: icon19,
+  githubactions: icon20,
+  php: icon21,
+  laravel: icon22,
+  tailwindcss: icon23,
+  bash: icon24
 }
 
 const labels: { [key: string]: string } = {
@@ -53,7 +69,15 @@ const labels: { [key: string]: string } = {
   azure: "Azure",
   ado: "ADO Pipelines",
   json: "JSON",
-  atlassian: "Atlassian"
+  atlassian: "Atlassian",
+  postgresql: "PostgreSQL",
+  rabbitmq: "RabbitMQ",
+  amazonwebservices: "AWS",
+  githubactions: "GitHub Actions",
+  php: "PHP",
+  laravel: "Laravel",
+  tailwindcss: "Tailwind CSS",
+  bash: "Bash"
 }
 
 interface Props {
@@ -71,7 +95,7 @@ const Icon: React.FC<Props> = ({ iconName }) => {
 }
 
 const MyStack: React.FC = () => {
-  const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm', 'azure', 'ado', 'json', 'atlassian'];
+  const iconNames = ['browser', 'docker', 'golang', 'java', 'linux', 'react', 'spring', 'typescript', 'ubuntu', 'windows', 'k8s', 'helm', 'azure', 'ado', 'json', 'atlassian', 'postgresql', 'rabbitmq', 'amazonwebservices', 'githubactions', 'php', 'laravel', 'tailwindcss', 'bash'];
   return (
     <div className="my-stack animate-fade-in-up">
       <img src={fullstk} className="img-fullstk" alt="" />

@@ -27,8 +27,10 @@ function Experience() {
                   <span className="job-dates">{job.dates}</span>
                 </div>
                 <div className="job-company-row">
-                  {logoMap[job.company] && (
+                  {logoMap[job.company] ? (
                     <img src={logoMap[job.company]} className="comp-logo" alt={job.company} />
+                  ) : (
+                    <span className="job-dates">{job.company}</span>
                   )}
                 </div>
                 <p className="job-description">{job.description}</p>
